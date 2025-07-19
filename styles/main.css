@@ -1,1 +1,224 @@
-/* Write your CSS code in this file */
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("../fonts/shlop\ rg.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MyCustomFont1";
+  src: url("../fonts/zombies-brainless.regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: #f0f0f0;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url(../1567941_4242.jpg);
+}
+
+.container {
+  width: 450px;
+  background: #fff;
+  border: 3px solid #333;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.title-sec {
+  margin-bottom: 25px;
+  font-family: MyCustomFont;
+}
+
+.title {
+  font-size: 45px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #e74c3c;
+  margin: 0;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.stat-card {
+  background: #ecf0f1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  flex: 1;
+  border: 2px solid #bdc3c7;
+}
+
+.stat-label {
+  color: #7f8c8d;
+  font-weight: normal;
+}
+
+.stat-value {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.hints-sec {
+  margin-bottom: 25px;
+}
+
+.hints-box {
+  background: #f8f9fa;
+  border: 2px solid #34495e;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0;
+}
+
+.hints-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+  font-family: MyCustomFont1;
+}
+
+.slot-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.slot {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #f39c12, #e67e22);
+  border: 3px solid #d35400;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.slot.spinning {
+  animation: slot-spin 0.5s ease-in-out;
+}
+
+@keyframes slot-spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.game-btn {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 5px;
+}
+
+.game-btn:hover:not(:disabled) {
+  background: #2980b9;
+}
+
+.game-btn:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.reset-btn {
+  background: #e74c3c;
+}
+
+.reset-btn:hover {
+  background: #c0392b;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.feedback {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0;
+  background: #ecf0f1;
+  color: #2c3e50;
+  border: 2px solid #bdc3c7;
+}
+
+.feedback.win {
+  background: #d5f4e6;
+  color: #27ae60;
+  border-color: #27ae60;
+}
+
+.feedback.lose {
+  background: #fadbd8;
+  color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.feedback.hot {
+  background: #fdeaa7;
+  color: #fdcb6e;
+  border-color: #f39c12;
+}

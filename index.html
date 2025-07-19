@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <title>Guessing Game</title>
-    <link rel="stylesheet" href="main.css">
-    <!-- the MAIN.CSS file is linked here -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guessing the Number</title>
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
-
   <body>
-
-
-
-
-
-    <!-- <script src='js/guessing-game.js'></script> -->
-    <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
+    <div class="container">
+      <div class="title-sec">
+        <h1 class="title">Guess Me if You Can!</h1>
+        <p class="subtitle">Guess the lucky number between 1-100!</p>
+      </div>
+      <div class="stats-section">
+        <div class="stat-card">
+          <span class="stat-label">Attempts: </span>
+          <span class="stat-value" id="attempts">0/5</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Past Guesses: </span>
+          <span class="stat-value" id="past-guesses">None</span>
+        </div>
+      </div>
+      <div class="hints-sec">
+        <div class="hints-box">
+          <h3 class="hints-title">👇️👇️Lucky Hints👇️👇️</h3>
+          <div class="slot-container">
+            <div class="slot" id="slot1">?</div>
+            <div class="slot" id="slot2">?</div>
+            <div class="slot" id="slot3">?</div>
+          </div>
+          <button class="game-btn" id="hint-btn">Click Me!👈️</button>
+        </div>
+      </div>
+      <div class="input-section">
+        <input
+          type="number"
+          id="guess-input"
+          placeholder="Enter your guess (1-100)"
+          min="1"
+          max="100"
+          class="input"
+        />
+        <div class="button-group">
+          <button class="game-btn" id="play-btn">🎯 Play Guess!</button>
+          <button class="game-btn reset-btn" id="reset-btn">
+            🔄 Reset Game
+          </button>
+        </div>
+      </div>
+      <div class="feedback" id="feedback">
+        🙏नमस्ते🙏, १ देखि १०० सम्मको कुनै एक अंक छान्नुहोस्!
+      </div>
+    </div>
+    <script src="./js/guessing-game.js"></script>
   </body>
-
 </html>
